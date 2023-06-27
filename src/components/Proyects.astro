@@ -1,0 +1,22 @@
+---
+import { Card } from "accessible-astro-components";
+const posts = await Astro.glob("../pages/proyect/**/*.mdx");
+---
+<section id="" class="container">
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <Card
+              url={"/proyect/" + post.frontmatter.slug}
+              img={post.frontmatter.image}
+              title={post.frontmatter.title}
+              footer={post.frontmatter.author}
+            >
+              {post.frontmatter.description}
+            </Card>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
