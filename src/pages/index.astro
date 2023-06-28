@@ -1,24 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Proyects from "../components/Proyects.astro";
+import Intro from "../components/Intro.astro";
+import NavBar from "../components/NavBar.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+  <NavBar />
   <main>
+    <Intro />
     <Proyects />
   </main>
 </Layout>
 
 <style>
   main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    width: 80%;
   }
   .text-gradient {
     background-image: var(--accent-gradient);

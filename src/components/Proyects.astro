@@ -1,22 +1,26 @@
 ---
-import { Card } from "accessible-astro-components";
+import Card  from "./Card.astro";
 const posts = await Astro.glob("../pages/proyect/**/*.mdx");
 ---
-<section id="" class="container">
-    <ul>
-      {
-        posts.map((post) => (
-          <li>
-            <Card
-              url={"/proyect/" + post.frontmatter.slug}
-              img={post.frontmatter.image}
-              title={post.frontmatter.title}
-              footer={post.frontmatter.author}
-            >
-              {post.frontmatter.description}
-            </Card>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+
+<section
+  id="Proyects"
+  class="flex h-[600px] w-10/12 flex-col-reverse items-center justify-center rounded-lg border border-gray-200 shadow dark:border-gray-700 md:flex-row"
+>
+  <ul class="grid grid-cols-3 gap-8 list-none">
+    {
+      posts.map((post) => (
+        <li>
+          <Card
+            url={"/proyect/" + post.frontmatter.slug}
+            image={post.frontmatter.image}
+            title={post.frontmatter.title}
+            description={post.frontmatter.author}
+          >
+            {post.frontmatter.description}
+          </Card>
+        </li>
+      ))
+    }
+  </ul>
+</section>

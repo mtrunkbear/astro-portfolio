@@ -1,0 +1,49 @@
+<button
+  type="button"
+  class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-2xl text-sm px-4 py-2 text-center mr-3 md:mr-0 w-36 border-gradient border-gradient-mask"
+  style="background: linear-gradient(263.99deg, #1E0040 18.74%, rgba(76, 0, 112, 0.8) 116.28%),
+linear-gradient(110.32deg, #BCBCBC -2.98%, #680198 63.51%);
+}"
+  >Contact</button
+>
+
+<style>
+    /*    .border-gradient {
+    border-image-source: linear-gradient(
+      110.32deg,
+      #bcbcbc -2.98%,
+      #680198 63.51%
+    );
+    
+    border-image-slice: 1;
+    background-color:red;
+  }
+  
+  
+   */
+    .border-gradient {
+      position: relative;
+      padding: 15px 20px;
+    }
+  
+    .border-gradient-mask::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 16px;
+      border: 2px solid transparent;
+      background: linear-gradient(150.32deg, #bcbcbc -2.98%, #680198 63.51%)
+        border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+    .gradient-custom {
+      background-color: red;
+    }
+  </style>
+  
