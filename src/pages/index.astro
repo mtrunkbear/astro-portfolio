@@ -3,25 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import Proyects from "../components/Proyects.astro";
 import Intro from "../components/Intro.astro";
 import NavBar from "../components/NavBar.astro";
+import Carousel from "../components/Carousel.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <NavBar />
-  <main>
+  <main class="flex flex-col items-center justify-center md:w-12/12 2xl:w-9/12">
     <Intro />
     <Proyects />
   </main>
 </Layout>
-
 <style>
-  main {
+  /* main {
     display: flex;
     flex-direction: column;
 
     align-items: center;
     justify-content: center;
     width: 80%;
-  }
+  } */
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
