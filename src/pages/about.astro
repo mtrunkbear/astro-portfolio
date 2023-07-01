@@ -2,12 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Proyects from "../components/Proyects.astro";
 import Intro from "../components/Intro.astro";
+import AboutBio from "../components/AboutBio.astro";
 ---
 
 <Layout title="Miguel Troncoso DEV">
-  <main class="flex flex-col items-center justify-center md:w-12/12 2xl:w-9/12">
-    <Intro />
-    <Proyects />
+  <main class="flex flex-col h-auto items-center justify-center md:w-12/12 2xl:w-9/12">
+ 
+    <AboutBio />
+    <div class="w-8/12 flex items-center justify-center mb-20"><div class='w-10/12 h-40 rounded-xl bg-[#1919198F]'></div></div>
   </main>
 </Layout>
 <style>

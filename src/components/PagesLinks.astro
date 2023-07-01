@@ -1,0 +1,25 @@
+---
+const pages = [
+  { title: "About", route: "./about" },
+  { title: "Works", route: "./" },
+  { title: "Blog", route: "./" },
+];
+---
+
+<ul
+class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700"
+>
+{
+  pages.map(({ title, route }) => (
+    <li>
+      <a
+        href={route}
+        class="block py-2 pl-3 pr-4 text-white font-bold text-3x1 leading-29  rounded md:bg-transparent md:p-0  "
+        aria-current="page"
+      >
+        {title}
+      </a>
+    </li>
+  ))
+}
+</ul>

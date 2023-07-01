@@ -1,0 +1,8 @@
+---
+const { src, name } = Astro.props;
+---
+
+<a href="#"  class="text-gray-500 hover:text-gray-900 dark:hover:text-white ">
+  <img  class="w-6 h-6" src={src} alt={name} />
+  <span class="sr-only">{name}</span>
+</a>

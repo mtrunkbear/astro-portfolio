@@ -1,15 +1,20 @@
+---
+import RRSS from "./RRSS.astro";
+const {title,description,withRRSS} =Astro.props;
+---
+
 <div
   class="flex flex-col  md:items-start pl-20 justify-center p-4 leading-normal w-11/12 md:w-6/12"
 >
   <h1 class="mb-2 w-full text-4xl font-black tracking-tight text-white dark:text-white">
-    {" I'm Miguel Troncoso "}
+    {title}
   </h1>
   <h2
     class="w-10/12  mb-3 text-white dark:text-white text-1xl font-bold leading-29 tracking-normal"
   >
-    I am a self-taught developer dedicated to creating technological solutions
-    that make a difference. Passionate about open source, startups and building
-    impactful side projects.
+   {description}
   </h2>
-  <div class="flex justify-start w-full"></div>
+  <div class="flex justify-start w-full">
+    {withRRSS&&<RRSS/>}
+  </div>
 </div>

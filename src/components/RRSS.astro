@@ -1,0 +1,14 @@
+---
+import SocialIcon from "./SocialIcon.astro";
+const icons = [
+  { name: "Github", src: "./assets/github.svg" },
+  { name: "Linkedin", src: "./assets/linkedin.svg" },
+  { name: "Twitter", src: "./assets/twitter.svg" },
+];
+---
+
+<div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+  {icons.map(({ name, src }) => <SocialIcon name={name} src={src} />)}
+
+ 
+</div>

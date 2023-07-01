@@ -1,10 +1,6 @@
 ---
 import Button from "./Button.astro";
-const pages = [
-  { title: "About", route: "./" },
-  { title: "Works", route: "./" },
-  { title: "Blog", route: "./" },
-];
+import PagesLinks from "./PagesLinks.astro";
 ---
 
 <nav
@@ -13,7 +9,7 @@ const pages = [
   <div
     class="max-w-screen-xl h-full flex flex-wrap items-center justify-between mx-auto p-4"
   >
-    <a href="" class="flex items-center">
+    <a href="./" class="flex items-center">
       <img
         src="assets/logo.svg"
         class="mr-3 w-20 h-20"
@@ -47,23 +43,7 @@ const pages = [
       class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
       id="navbar-cta"
     >
-      <ul
-        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700"
-      >
-        {
-          pages.map(({ title, route }) => (
-            <li>
-              <a
-                href={route}
-                class="block py-2 pl-3 pr-4 text-white font-bold text-3x1 leading-29  rounded md:bg-transparent md:p-0  "
-                aria-current="page"
-              >
-                {title}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+     <PagesLinks/>
     </div>
   </div>
 </nav>
