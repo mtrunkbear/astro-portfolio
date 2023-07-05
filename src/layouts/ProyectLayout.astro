@@ -1,18 +1,43 @@
 ---
+import Icon from "../components/Icon.astro";
+import Layout from "./Layout.astro";
 const {
-  frontmatter: { title, description, pubDate, image, author },
+  frontmatter: { title, description, pubDate, image, author, slug },
 } = Astro.props;
+const posts = await Astro.glob("../pages/proyect/**/*.mdx");
+const postsSlugs = posts.map((post) => post.frontmatter.slug);
+const filteredSlugs = postsSlugs.filter((i) => i != slug);
+const actualSlugIndex = postsSlugs.indexOf(slug);
+const prevSlugIndex =
+  actualSlugIndex > 0 ? actualSlugIndex - 1 : postsSlugs.length - 1;
+const nextSlugIndex =
+  actualSlugIndex < postsSlugs.length - 1 ? actualSlugIndex + 1 : 0;
 ---
 
-<article>
-  <div class="article-head">
-    <h1 class="title">{title}</h1>
-    <em>Written by: {author}</em>
-  </div>
-  <div class="article-body">
-    {image && <img width={720} height={360} src={image} alt="" />}
-    Published on: {pubDate && <time>{pubDate}</time>}
-    <hr />
-    <slot />
-  </div>
-</article>
+<Layout title={title}>
+  <main class="flex justify-center">
+    <article class="flex flex-col-reverse lg:flex-row items-center lg:justify-between py-20 text-white w-11/12 mb-24">
+      <div class="flex flex-col items-center mt-10 lg:mt-0 article-body w-full lg:w-5/12 lg:items-start lg:ml-40">
+        <div class="flex justify-between w-40 lg:ml-[-120px]">
+          <Icon
+          size={8}
+            src={"/assets/circle_chevron_left.svg"}
+            href={"./" + postsSlugs[prevSlugIndex]}
+          />
+          <Icon
+          size={8}
+            src={"/assets/circle_chevron_right.svg"}
+            href={"./" + postsSlugs[nextSlugIndex]}
+          />
+        </div>
+        <div class="mt-10 w-10/12 lg:w-9/12">
+          <h1 class="title text-white text-2xl font-bold mb-10 lg:ml-[-60px]">
+            {title}
+          </h1>
+          <div><slot /></div>
+        </div>
+      </div>
+      {image && <img class="w-8/12 lg:w-5/12" src={image} alt="" />}
+    </article>
+  </main>
+</Layout>
