@@ -4,10 +4,11 @@ const pages = [
   { title: "Works", route: "/works" },
   { title: "Blog", route: "/" },
 ];
+const { isInFooter} = Astro.props;
 ---
 
 <ul
-class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700"
+class=`flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700 ${isInFooter? "border-0 mt-0": "bg-[#341c4c] md:bg-transparent"}`
 >
 {
   pages.map(({ title, route }) => (
