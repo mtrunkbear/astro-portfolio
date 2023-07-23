@@ -10,7 +10,7 @@ export interface Props {
 const { url, image, title, description } = Astro.props;
 ---
 
-<div class=" flex flex-col min-w-[250px] w-[90vw] sm:w-[48vw] md:w-[38vw] lg:w-[24vw] xl:w-[14-vw] sm:max-w-[280px] md:max-w-full lg:max-w-[300px] xl:max-w-[300px] h-[400px] sm:h-[490px] rounded-3xl shadow bg-[#341c4c]">
+<div class=" flex flex-col min-w-[250px] w-[90vw] sm:w-[48vw] md:w-[38vw] lg:w-[24vw] xl:w-[14-vw] sm:max-w-[280px] md:max-w-full lg:max-w-[300px] xl:max-w-[300px] h-[400px] sm:h-[490px] rounded-3xl shadow bg-[#341c4c] hover:scale-[1.02] transition ease-in-out delay-50">
   <a  href={url}>
     <h5
       class="flex mb-2 text-[20px] font-bold tracking-tight text-gray-900 dark:text-white sm:h-20 items-center p-5 pl-8"

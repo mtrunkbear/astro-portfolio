@@ -10,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html class="h-auto" lang="en">
+<html class="h-auto m-0 p-0" lang="en">
   <Head title={title} />
   <body>
     <NavBar />
@@ -19,6 +19,8 @@ const { title } = Astro.props;
   </body>
   <style is:global>
     :root {
+      margin:0;
+      padding:0;
       --accent: 124, 58, 237;
       --accent-gradient: linear-gradient(
         45deg,
@@ -44,9 +46,7 @@ const { title } = Astro.props;
     body {
       display: flex;
       flex-direction: column;
-      align-items: center;      
-      padding:0;
-      margin:0;
+      align-items: center;     
     }
   </style>
 </html>
