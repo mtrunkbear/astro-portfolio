@@ -2,17 +2,18 @@
 import ImageCircle from "./ImageCircle.astro";
 import IntroDescription from "./IntroDescription.astro";
 ---
-<h1 class="text-center sm:text-center lg:text-end mt-20  lg:pr-56 xl:pr-64 text-2xl font-semibold text-white w-9/12 2xl:w-10/12">About Me</h1>
+<h1 class="text-center sm:text-center lg:text-end mt-10 md:mt-20  lg:pr-56 xl:pr-64 text-2xl font-semibold text-white w-9/12 2xl:w-10/12">About Me</h1>
  
 <section
   id="Intro"
-  class="flex lg:h-[400px] mt-10 w-9/12 lg:w-10/12 xl:w-9/12 2xl:w-10/12 flex-col items-center justify-center rounded-lg lg:flex-row mb-24 lg:mb-40"
+  class="flex lg:h-auto mt-6 md:mt-10 w-9/12 lg:w-10/12 xl:w-9/12 2xl:w-10/12 flex-col items-center justify-center rounded-lg lg:flex-row mb-10"
 >
 
   <ImageCircle />
   <IntroDescription
     title={"Miguel Troncoso"}
-    style="md:pl-32  w-[80vw] md:w-[80vw] lg:w-full items-start md:items-start lg:items-end  "
-    description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales leo ac mauris ultricies, ac vulputate enim ultrices. Praesent sit amet laoreet augue, quis tincidunt massa. Curabitur viverra mauris in tortor condimentum ullamcorper. Quisque eget lorem quis tortor eleifend rhoncus. Cras malesuada diam nunc, eu accumsan eros congue vel. Nam faucibus, risus ut rutrum blandit, lacus turpis condimentum lectus, in suscipit est enim ac ligula. Vestibulum justo dolor, pellentesque quis rutrum et, mollis non tellus. Suspendisse sit amet nisl id sapien pellentesque aliquet. Nunc dapibus nunc vitae mattis eleifend. Duis semper libero ac sem accumsan, eget fringilla diam pulvinar. Quisque justo magna, mattis eget nisi at, semper sagittis nibh. "}
+    descriptionFontSize="text-sm md:text-md"
+    style="md:pl-32 w-[80vw] md:w-[80vw] lg:w-full items-start md:items-start lg:items-end"
+    description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales leo ac mauris ultricies, ac vulputate enim ultrices. Praesent sit amet laoreet augue, quis tincidunt massa. Curabitur viverra mauris in tortor condimentum ullamcorper. Quisque eget lorem quis tortor eleifend rhoncus. Cras malesuada diam nunc, eu accumsan eros congue vel. Nam faucibus, risus ut rutrum blandit, lacus turpis condimentum lectus, in suscipit est enim ac ligula. Vestibulum justo dolor, pellentesque quis rutrum et, mollis non tellus. Suspendisse sit amet nisl id sapien pellentesque aliquet. Nunc dapibus nunc vitae mattis eleifend."}
   />
 </section>

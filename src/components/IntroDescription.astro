@@ -1,6 +1,6 @@
 ---
 import RRSS from "./RRSS.astro";
-const { style, title, description, withRRSS } = Astro.props;
+const { style, descriptionFontSize, title, description, withRRSS } = Astro.props;
 ---
 
 <div
@@ -11,7 +11,7 @@ const { style, title, description, withRRSS } = Astro.props;
     {title}
   </h1>
   <h2
-    class="w-full sm:w-10/12 mb-3 text-white dark:text-white text-base md:text-lg font-bold leading-29 tracking-normal"
+    class=`w-full sm:w-10/12 mb-3 text-white dark:text-white text-base md:text-lg font-bold leading-29 tracking-normal ${descriptionFontSize}`
   >
     {description}
   </h2>

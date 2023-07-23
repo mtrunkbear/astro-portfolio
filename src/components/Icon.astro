@@ -1,12 +1,14 @@
 ---
-const { src, name, href, size=6 } = Astro.props;
+import { dynamicViteAssetImport } from "../utils/functions.js";
 
-
-const { default: innerHTML } = await import(`${src}?raw`);
+const { src, name, href, size = 6 } = Astro.props;
+const { default: innerHTML } = await dynamicViteAssetImport(src);
 ---
 
-<a href={href} class=`text-gray-500 w-${size} hover:scale-150 cursor-pointer fill-white hover:fill-[rgba(109,40,217)]`>
-<!-- //Todo FIX icon size from props -->
+<a
+  href={href}
+  class=`text-gray-500 w-${size} hover:scale-150 cursor-pointer fill-white hover:fill-[rgba(109,40,217)]`
+>
   <Fragment set:html={innerHTML} />
   <span class="sr-only">{name}</span>
 </a>
