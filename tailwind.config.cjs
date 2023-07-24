@@ -17,8 +17,10 @@ module.exports = {
           DEFAULT: "#391e53",
         },
       },
+      screens: {
+        xs: "540px",
+      },
     },
-    
   },
   plugins: [],
 };
