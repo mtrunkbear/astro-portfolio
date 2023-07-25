@@ -7,7 +7,7 @@ const { default: innerHTML } = await dynamicViteAssetImport(src);
 
 <a
   href={href}
-  class=`text-gray-500 w-${size} hover:scale-150 cursor-pointer fill-white hover:fill-[rgba(109,40,217)] ${style}`
+  class=`text-gray-500 w-${size} hover:scale-150 cursor-pointer fill-white hover:fill-main hover:brightness-200 ${style}`
  
 >
   <Fragment set:html={innerHTML}  />
