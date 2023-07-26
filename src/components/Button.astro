@@ -5,7 +5,7 @@ const { href, width, height } = Astro.props;
 <a
   id="button"
   href={href}
-  class=`flex items-center justify-center text-white w-${width}  ${height?"h-"+height:""} md:w-40 md:h-[36px] focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-2xl text-sm px-4 py-2 text-center border-gradient border-gradient-mask`
+  class=`flex items-center justify-center text-white w-${width} h-[36px]  ${height?"h-"+height:""} md:w-40 focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-2xl text-sm px-4 py-2 text-center border-gradient border-gradient-mask`
   style=""><slot /></a
 >
 
